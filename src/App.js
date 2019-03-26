@@ -1,26 +1,49 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+// import LoanInputPanel from './components/LoanInputPanel';
+import RepaymentsTable from './components/RepaymentsTable';
+import AreaGraph from './components/AreaGraph';
+// import Parent from './components/sandbox/Parent';
+import { Provider, Consumer } from './context';
+import PieChart from './components/PieChart';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Fragment>
+        <Header />
+        <Provider>
+          <Consumer>
+            {value => (
+              <div className="container">
+                {/* Results Row */}
+                <div className="row">
+                  <div
+                    className="col-md-6 px-0"
+                    style={{ height: '50vh', overflowY: 'scroll' }}
+                  >
+                    <RepaymentsTable value={value} />
+                  </div>
+                  <div className="col-md-6 px-0">
+                    <AreaGraph className="mt-1" value={value} />
+
+                    <PieChart class="pl-5" value={value} />
+                  </div>
+                </div>
+                <hr />
+                {/*  */}
+                <section class="container fixed-bottom">
+                  <footer class="card text-center">
+                    By Douglas Chan {'\u00A9'} 2018
+                  </footer>
+                </section>
+              </div>
+            )}
+          </Consumer>
+        </Provider>
+      </Fragment>
     );
   }
 }
