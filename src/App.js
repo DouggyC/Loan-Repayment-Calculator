@@ -25,7 +25,8 @@ class App extends Component {
                     style={{
                       height: '50vh',
                       width: 'auto',
-                      overflowY: 'scroll'
+                      overflowY: 'scroll',
+                      overflowX: 'hidden'
                     }}
                   >
                     <RepaymentsTable value={value} />
@@ -40,7 +41,7 @@ class App extends Component {
                 {/*  */}
                 <section className="container fixed-bottom">
                   <footer className="card text-center">
-                    By Douglas Chan {'\u00A9'} 2018
+                    By Douglas Chan {'\u00A9'} 2019
                   </footer>
                 </section>
               </div>

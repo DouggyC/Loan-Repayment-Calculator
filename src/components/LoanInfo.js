@@ -11,7 +11,7 @@ const LoanInfo = ({ value }) => {
   } = value;
   return (
     <Alert>
-      <h4>Loan Information</h4>
+      <h5>Loan Information</h5>
       <Row className="d-flex">
         <Col>
           <strong>Borrowed : </strong>${loanAmount}

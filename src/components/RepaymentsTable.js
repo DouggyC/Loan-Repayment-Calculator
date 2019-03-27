@@ -5,15 +5,22 @@ import { Table } from 'reactstrap';
 const RepaymentsTable = memo(({ value }) => {
   // console.log(value);
   return (
-    <Table style={{ backgroundColor: '#fff' }}>
+    <Table
+      style={{
+        margin: '0 0.1px',
+        backgroundColor: '#fff',
+        boxSizing: 'border-box',
+        width: '100%'
+      }}
+    >
       <thead>
         <tr>
-          <TableCell>Month</TableCell>
-          <TableCell>Starting Principal</TableCell>
-          <TableCell>Monthly Repayment</TableCell>
-          <TableCell>Principal paid</TableCell>
-          <TableCell>Interest paid</TableCell>
-          <TableCell>Remaining Principal</TableCell>
+          <TableCellHeading>Month</TableCellHeading>
+          <TableCellHeading>Starting Principal</TableCellHeading>
+          <TableCellHeading>Monthly Repayment</TableCellHeading>
+          <TableCellHeading>Principal paid</TableCellHeading>
+          <TableCellHeading>Interest paid</TableCellHeading>
+          <TableCellHeading>Remaining Principal</TableCellHeading>
         </tr>
       </thead>
       <tbody>
@@ -34,11 +41,22 @@ const RepaymentsTable = memo(({ value }) => {
 
 export default RepaymentsTable;
 
-const TableCell = styled.td`
-  font-size: calc(20% * 8vw + 0.7rem);
+const TableCellHeading = styled.td`
+  font-size: calc(20% * 7vw + 0.5rem);
   vertical-align: middle !important;
   text-align: center !important;
   font-weight: normal !important;
-  padding: 1px 2.5px !important;
+  padding: 1px 2px !important;
   border-color: #17a2b8 !important;
+  box-sizing: border-box !important;
+`;
+
+const TableCell = styled.td`
+  font-size: calc(20% * 7vw + 0.5rem);
+  vertical-align: middle !important;
+  text-align: center !important;
+  font-weight: 300 !important;
+  padding: 1px 2px !important;
+  border-color: #17a2b8 !important;
+  box-sizing: border-box !important;
 `;
