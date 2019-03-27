@@ -130,7 +130,7 @@ class AreaGraph extends Component {
         options={this.state.options}
         series={this.props.value.areaSeries}
         type="area"
-        width="500"
+        width="99%"
         height="auto"
       />
     );

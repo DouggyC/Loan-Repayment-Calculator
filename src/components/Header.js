@@ -16,7 +16,7 @@ class Header extends Component {
             className="display-3 text-center text-light mx-auto"
             style={{ fontSize: 'calc(0.9vw + 2em + 20%)', fontWeight: '400' }}
           >
-            Loan Interest and Principal Repayment Calculator
+            Loan Repayment Calculator
           </CardTitle>
         </CardHeader>
       </Card>

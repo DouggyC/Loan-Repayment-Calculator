@@ -18,11 +18,11 @@ class Provider extends Component {
   state = {
     repaymentSchedule: [],
     // Principal
-    loanAmount: 0,
+    loanAmount: '',
     // Term
-    loanTermInYears: 0,
+    loanTermInYears: '',
     // Interest
-    yearIntRate: 0,
+    yearIntRate: '',
     // Month Counter
 
     months: 1,

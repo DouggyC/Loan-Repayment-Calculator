@@ -22,7 +22,11 @@ class App extends Component {
                 <div className="row">
                   <div
                     className="col-md-6 px-0"
-                    style={{ height: '50vh', overflowY: 'scroll' }}
+                    style={{
+                      height: '50vh',
+                      width: 'auto',
+                      overflowY: 'scroll'
+                    }}
                   >
                     <RepaymentsTable value={value} />
                   </div>
@@ -34,8 +38,8 @@ class App extends Component {
                 </div>
                 <hr />
                 {/*  */}
-                <section class="container fixed-bottom">
-                  <footer class="card text-center">
+                <section className="container fixed-bottom">
+                  <footer className="card text-center">
                     By Douglas Chan {'\u00A9'} 2018
                   </footer>
                 </section>
