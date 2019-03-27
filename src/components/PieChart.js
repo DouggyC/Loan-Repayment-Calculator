@@ -18,7 +18,7 @@ class PieChart extends Component {
       // Legend labesl
       labels: ['Principal', 'Interest'],
       legend: {
-        position: 'right'
+        position: 'left'
       },
       title: {
         // text: ,
