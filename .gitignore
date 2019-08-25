@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 /src/context3.js
+.netlify
 
 # dependencies
 /node_modules
